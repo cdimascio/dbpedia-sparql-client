@@ -1,6 +1,5 @@
-import dps from '../../lib';
-
-const query = `SELECT DISTINCT ?Concept WHERE {[] a ?Concept} LIMIT 10`;
+var dps = require('../../index').default;
+var query = 'SELECT DISTINCT ?Concept WHERE {[] a ?Concept} LIMIT 10';
 dps.client()
   .query(query)
   .asXml()
