@@ -1,7 +1,7 @@
 {
-  "name": "dbpedia-sqarql-client",
-  "version": "0.1.0",
-  "description": "A simple DBpedia SQARQL client",
+  "name": "dbpedia-sparql-client",
+  "version": "0.8.1",
+  "description": "A simple DBpedia SPARQL client",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

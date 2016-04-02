@@ -1,12 +1,13 @@
 # dbpedia-sparql-client
 
 ## Install
+
 `npm install dbpediq-sparql-client`
 
 ## Example
 
 ```
-import dps from 'dbpedia-sqarql-client';
+import dps from 'dbpedia-sparql-client';
 
 const query = `SELECT DISTINCT ?Concept WHERE {[] a ?Concept} LIMIT 10`;
 
