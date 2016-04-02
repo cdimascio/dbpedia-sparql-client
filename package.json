@@ -1,11 +1,13 @@
 {
   "name": "dbpedia-sparql-client",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "A simple DBpedia SPARQL client",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "compile": "./node_modules/.bin/babel lib/index.js --out-file index.js ",
+    "examples:json": "npm run compile && node examples/json/ex.js",
+    "examples:xml": "npm run compile && node examples/xml/ex.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

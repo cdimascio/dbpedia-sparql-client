@@ -76,7 +76,7 @@ var DbPediaSparql = function () {
         uri: this._uri,
         qs: qs,
         headers: headers,
-        json: this._json
+        json: opts.format === 'json'
       };
 
       return (0, _requestPromise2.default)(options);
