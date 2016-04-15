@@ -1,10 +1,12 @@
 # dbpedia-sparql-client
 
+A promisified DBpedia SPARQL client that keeps it simple.
+
 ## Install
 
 `npm install dbpediq-sparql-client`
 
-## Example
+## Use
 ###ES2015
 
 ```
