@@ -1,6 +1,6 @@
 {
   "name": "dbpedia-sparql-client",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "A simple DBpedia SPARQL client",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
     "rdf",
     "dbpedia"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdimascio/dbpedia-sparql-client"
+  },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)",
   "license": "MIT",
   "dependencies": {
