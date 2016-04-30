@@ -33,7 +33,7 @@ dps.client()
   .timeout(15000) // optional, defaults to 10000
   .asJson() // or asXml()
   .then(function(r) { /* handle success */ })
-  .catch(function(e) { /* handle error });
+  .catch(function(e) { /* handle error */ });
 
 ```
 

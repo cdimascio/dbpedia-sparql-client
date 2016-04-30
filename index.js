@@ -33,6 +33,7 @@ var DbPediaSparql = function () {
     key: 'timeout',
     value: function timeout(_timeout) {
       this._timeout = _timeout;
+      return this;
     }
   }, {
     key: 'asJson',
