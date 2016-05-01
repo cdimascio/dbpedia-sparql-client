@@ -6,13 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _requestPromise = require('request-promise');
-
-var _requestPromise2 = _interopRequireDefault(_requestPromise);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var isBrowser = new Function("try {return this===window;}catch(e){ return false;}");
+var fetch = isBrowser() ? window.fetch : require('node-fetch');
 
 var DbPediaSparql = function () {
   function DbPediaSparql() {
@@ -62,7 +59,7 @@ var DbPediaSparql = function () {
       };
 
       var headers = {
-        'Content-type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/sparql-results+json'
       };
 
@@ -71,16 +68,21 @@ var DbPediaSparql = function () {
         delete headers.Accept;
       }
 
-      var options = {
-        method: 'GET',
-        encoding: 'utf8',
-        uri: this._uri,
-        qs: qs,
-        headers: headers,
-        json: opts.format === 'json'
-      };
+      var qst = '?' + Array.from(Object.keys(qs)).map(function (key) {
+        return key + '=' + encodeURIComponent(qs[key]);
+      }).join('&');
 
-      return (0, _requestPromise2.default)(options);
+      return fetch(this._uri + qst, {
+        headers: headers,
+        method: 'GET',
+        mode: 'cors'
+      }).then(function (res) {
+        if (opts.format === 'json') {
+          return res.json();
+        } else {
+          return res.text();
+        }
+      });
     }
   }], [{
     key: 'client',
