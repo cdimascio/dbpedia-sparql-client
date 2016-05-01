@@ -4,7 +4,7 @@ A promisified DBpedia SPARQL client that keeps it simple.
 
 ## Install
 
-`npm install dbpediq-sparql-client`
+`npm install dbpedia-sparql-client`
 
 #### Note: 
 Requires fetch when running in a browser. If fetch is not available, install a [fetch polyfill](https://github.com/github/fetch)
