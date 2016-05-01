@@ -6,6 +6,10 @@ A promisified DBpedia SPARQL client that keeps it simple.
 
 `npm install dbpediq-sparql-client`
 
+#### Note: 
+Requires fetch when running in a browser. If fetch is not available, install a [fetch polyfill](https://github.com/github/fetch)
+
+
 ## Use
 ###ES2015
 
@@ -36,6 +40,7 @@ dps.client()
   .catch(function(e) { /* handle error */ });
 
 ```
+
 
 ### License
 MIT
