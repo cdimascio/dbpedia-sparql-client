@@ -68,7 +68,7 @@ var DbPediaSparql = function () {
         delete headers.Accept;
       }
 
-      var qst = '?' + Array.from(Object.keys(qs)).map(function (key) {
+      var qst = '?' + Object.keys(qs).map(function (key) {
         return key + '=' + encodeURIComponent(qs[key]);
       }).join('&');
 
