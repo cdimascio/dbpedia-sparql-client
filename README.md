@@ -13,7 +13,7 @@ Requires fetch when running in a browser. If fetch is not available, install a [
 ## Use
 ### ES2015
 
-```
+```javascript
 import dps from 'dbpedia-sparql-client';
 const query = `SELECT DISTINCT ?Concept WHERE {[] a ?Concept} LIMIT 10`;
 
@@ -28,7 +28,7 @@ dps
 ```
 
 ### ES5
-```
+```ecmascript 6
 var dps = require('dbpedia-sparql-client').default;
 var query = 'SELECT DISTINCT ?Concept WHERE {[] a ?Concept} LIMIT 10';
 
