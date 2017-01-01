@@ -28,7 +28,7 @@ dps
 ```
 
 ### ES5
-```ecmascript 6
+```javascript
 var dps = require('dbpedia-sparql-client').default;
 var query = 'SELECT DISTINCT ?Concept WHERE {[] a ?Concept} LIMIT 10';
 
