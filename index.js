@@ -16,7 +16,7 @@ var DbPediaSparql = function () {
     _classCallCheck(this, DbPediaSparql);
 
     this._query = null;
-    this._uri = 'http://dbpedia.org/sparql';
+    this._uri = 'https://dbpedia.org/sparql';
     this._timeout = 10000;
   }
 
